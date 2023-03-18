@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+input {
+  display: block;
+}
+@layer {
+  .grad-text {
+    /* put the class inside @layer{...}*/
+    @apply bg-gradient-to-r from-red-500 via-orange-500 to-purple-500 bg-clip-text text-transparent;
+  }
+}
+.gls {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.grid-cols-fill-32 {
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+}
